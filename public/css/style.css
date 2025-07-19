@@ -1,0 +1,694 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover; /* Isi penuh layar */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-attachment: fixed; /* Background diam saat scroll */
+}
+
+#sidebar {
+  width: 280px;
+  height: 525px;
+  margin-left: 20px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 42px;
+  font-family: "Lilita One", cursive;
+}
+
+.navbar-brand span {
+  color: #ff3c00;
+}
+
+/* Form Input */
+.main-form {
+  background-color: rgba(74, 74, 108, 0.8);
+  border-radius: 30px;
+  width: 400px;
+}
+
+form input.main-search[type="search"] {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 50px !important;
+}
+
+form input.main-search[type="search"]::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+form input.main-search[type="search"]:focus {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  color: white;
+}
+
+/* Tombol Search */
+form button.main-search {
+  background-color: transparent;
+  border: none !important;
+  color: white;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Notifikasi Icon */
+.notif-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #ff3c00;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+/* User Info */
+.user-info {
+  background-color: rgba(74, 74, 108, 0.8);
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+.user-info i {
+  font-size: 1.8rem; /* Membesarkan ikon user */
+  margin-left: 20px;
+}
+
+/* Sidebar menyesuaikan dengan background input */
+.sidebar-custom {
+  background-color: rgba(74, 74, 108, 0.8);
+  border-radius: 15px !important;
+  width: 220px !important;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Atur warna link default dan saat hover */
+.sidebar {
+  padding: 0 20px 20px 0;
+}
+
+#sidebar ul li {
+  margin: 0 10px 10px 0;
+}
+
+.sidebar-custom .nav-link {
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-custom .nav-link:hover {
+  background-color: rgba(74, 74, 108, 0.8);
+}
+
+/* Link aktif */
+.sidebar-custom .nav-link.active {
+  color: #97e8ff;
+  background-color: transparent;
+}
+
+.sidebar-custom .nav-link i {
+  margin-right: 10px;
+}
+
+.sidebar-custom .nav-link {
+  font-size: 1.4rem;
+}
+
+.jumbotron,
+.container {
+  margin-left: 110px;
+  width: calc(200vh - 210px);
+  height: calc(100vh - 110px);
+}
+
+/* Page Project */
+#bg-card {
+  background-color: #e4e4f0; /* jika ingin warna juga di luar card-body */
+  margin-left: 140px;
+  width: 1080px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.project-card {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: #f0f0fb;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #343ab4;
+}
+
+.project-title-date {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5e5e5e;
+}
+
+.project-catcust {
+  font-size: 12px;
+  font-weight: 700;
+  width: 300px;
+  color: #484848;
+}
+
+.project-duedate {
+  border-radius: 20px;
+  background-color: #ff5b2a;
+  width: 130px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-step {
+  border-radius: 20px;
+  background-color: #f4ff2a;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-detail {
+  border-radius: 20px;
+  background-color: #ffffff;
+  width: 110px;
+  height: 35px;
+  text-align: center;
+  border: 2px solid #ff3c00;
+  justify-content: center;
+  color: #ff3c00;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-progress {
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 20px;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  color: #343ab4;
+  margin-right: 20px;
+}
+
+.form-select {
+  background-color: #8898ff;
+  border: none;
+  height: 35px;
+  width: 120px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  color: #343ab4;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+select.no-arrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none; /* opsional */
+}
+
+.project-search {
+  background-color: #8898ff;
+  border: none;
+  height: 35px;
+  width: 300px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 20px;
+  color: #343ab4;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+form input.project-search[type="search"] {
+  background-color: transparent;
+  color: #343ab4;
+  border: none;
+  outline: none;
+  border-radius: 50px !important;
+}
+
+form input.project-search[type="search"]::placeholder {
+  color: #343ab4;
+  opacity: 1;
+}
+
+form input.project-search[type="search"]:focus {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  color: #343ab4;
+}
+
+/* Tombol Search */
+form button.project-search {
+  background-color: transparent;
+  border: none !important;
+  color: #343ab4;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Detail Project */
+
+.project-detail-duedate,
+.project-detail-startdate {
+  border-radius: 20px;
+  width: 240px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-detail-startdate {
+  background-color: #7754ff;
+}
+
+.project-detail-duedate {
+  background-color: #ff5b2a;
+}
+
+.project-detail-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #343ab4;
+}
+
+.project-detail-catcust {
+  font-size: 15px;
+  font-weight: 700;
+  width: 300px;
+  color: #484848;
+}
+
+.btn-update-project {
+  border-radius: 20px;
+  width: 240px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #343ab4;
+}
+
+.progress-bar {
+  background-color: #9ea6da;
+  margin-top: 10px;
+  margin-right: 5px;
+  width: 30px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar-fill {
+  background-color: #343ab4;
+  margin-top: -10px;
+  margin-right: 5px;
+  width: 30px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.product-detail-step {
+  border-radius: 20px;
+  background-color: yellow;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-update {
+  border-radius: 20px;
+  background-color: #e4e4f0;
+  border: solid 2px #343ab4;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: #343ab4;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-update.active {
+  background-color: #343ab4; /* aktif: hijau */
+  color: white;
+}
+
+.custom-modal-bg {
+  background-color: #e4e4f0;
+  border-radius: 15px;
+  width: 900px;
+}
+
+.modal-title {
+  color: #343ab4;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.big-checkbox {
+  transform: scale(1.5); /* Atur ukurannya */
+  margin-right: 8px; /* Opsional: beri jarak */
+}
+
+.progress-prev {
+  border-radius: 20px;
+  background-color: yellow;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.progress-next {
+  border-radius: 20px;
+  background-color: transparent;
+  border: solid 1px black;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.icon-plus {
+  background-color: #8898ff;
+  border: none;
+  height: 35px;
+  width: 35px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  color: #343ab4;
+  font-size: 16px;
+}
+
+.new-project-card-prod,
+.new-project-card-flow,
+.new-project-card-doc {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: #f0f0fb;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-new-prod {
+  background-color: transparent;
+  border: none;
+}
+
+.table.new-prod-form,
+.table.new-prod-form th {
+  border: none !important;
+}
+
+.table.new-prod-form td {
+  border: solid 1px #7c7c7c;
+}
+
+table tbody tr .operate-product {
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+/* Hilangkan panah input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:hover,
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  background-color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-add-row {
+  align-content: center;
+  text-align: center;
+  color: #343ab4;
+  width: 30px;
+  height: 30px;
+  border: solid 1px #343ab4;
+  border-radius: 20px;
+}
+
+.icon-add-row,
+.btn-add-row {
+  background-color: transparent;
+  align-content: center;
+  text-align: center;
+  color: #343ab4;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.finish-new-project {
+  background-color: #343ab4;
+  border-radius: 20px;
+  color: white;
+  width: 100px;
+}
+
+.toggle-content {
+  display: none;
+}
+
+.toggle-new-proj {
+  background-color: transparent !important;
+  align-content: center;
+  text-align: center;
+  color: #343ab4;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.prod-progress-prev {
+  border-radius: 20px;
+  background-color: yellow;
+  margin-right: 10px;
+  width: 250px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.prod-progress-next {
+  border-radius: 20px;
+  background-color: transparent;
+  border: solid 1px black;
+  margin-left: 10px;
+  width: 250px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input-date:hover,
+.input-date:focus {
+  background-color: #8898ff;
+  border: none;
+  height: 35px;
+  width: 120px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  color: #343ab4;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.bar-schedule1 {
+  background-color: yellow;
+  border-radius: 10px;
+  color: black;
+  width: 20px;
+  height: 50px;
+  margin: 2px;
+  font-weight: 500;
+}
+.bar-schedule2 {
+  background-color: rgb(0, 225, 255);
+  border-radius: 10px;
+  color: black;
+  width: 20px;
+  height: 50px;
+  margin: 2px;
+  font-weight: 500;
+}
+.bar-schedule3 {
+  background-color: rgb(255, 34, 34);
+  border-radius: 10px;
+  color: black;
+  width: 20px;
+  height: 50px;
+  margin: 2px;
+  font-weight: 500;
+}
+
+.v-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100% !;
+}
+
+.bar-pic-schedule1 {
+  font-size: 14px;
+  background-color: yellow;
+  border-radius: 10px;
+  color: black;
+  width: 380px;
+  margin: 1px;
+  font-weight: 500;
+}
+
+.bar-pic-schedule2 {
+  font-size: 14px;
+  background-color: rgb(45, 234, 228);
+  border-radius: 10px;
+  color: black;
+  width: 380px;
+  margin: 1px;
+  font-weight: 500;
+}
+
+.bar-pic-schedule3 {
+  font-size: 14px;
+  background-color: rgb(255, 34, 34);
+  border-radius: 10px;
+  color: black;
+  width: 380px;
+  margin: 1px;
+  font-weight: 500;
+}
+
+.bar-name-schedule1 {
+  font-size: 14px;
+  background-color: yellow;
+  border-radius: 10px;
+  color: black;
+  width: 380px;
+  margin: 1px;
+  font-weight: 500;
+}
+
+.bar-name-schedule2 {
+  font-size: 14px;
+  background-color: rgb(45, 234, 228);
+  border-radius: 10px;
+  color: black;
+  width: 380px;
+  margin: 1px;
+  font-weight: 500;
+}
+
+.bar-name-schedule3 {
+  font-size: 14px;
+  background-color: rgb(255, 34, 34);
+  border-radius: 10px;
+  color: black;
+  width: 380px;
+  margin: 1px;
+  font-weight: 500;
+}
+
+.update-sched {
+  background-color: #8898ff;
+  border-radius: 20px;
+  width: 300px;
+  padding: 5px;
+  text-align: center;
+}
